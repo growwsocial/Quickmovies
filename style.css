@@ -40,7 +40,7 @@ body {
             margin: auto;
             text-align: left;
             overflow-y: auto;
-            height: 570px;
+            height: 450px;
         }
         .movie {
             display: flex;
@@ -86,7 +86,9 @@ body {
         .whatsapp-btn-pp:hover {
             transform: scale(1.05);
         }
-movie-poster {
+  
+        /* General Styles */
+.movie-poster {
     max-width: 100%;
     height: auto;
     display: block;
@@ -117,6 +119,7 @@ movie-poster {
 .imdb-link:hover {
     text-decoration: underline;
 }
+
 .input-field {
     position: relative;
     left: 20px;
