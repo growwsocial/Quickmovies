@@ -62,9 +62,9 @@ let selectedMovie = null;
         <p><b>IMDb Link:</b> <a href="${selectedMovie}" target="_blank" class="imdb-link">View on IMDb</a></p>
 <h3>📝 Enter Your Details</h3>
     </div>
-           <input type="text" id="userName" placeholder="Enter your name">
-        <input type="text" id="userWhatsapp" placeholder="Enter your WhatsApp number">
-        <button onclick="sendToTelegram()">Submit</button>
+           <input type="text" id="userName" placeholder="Enter your name" class="input-field">
+<input type="text" id="userWhatsapp" placeholder="Enter your WhatsApp number" class="input-field">
+<button onclick="sendToTelegram()" class="submit-button">Submit</button>
     `;
 }
 
