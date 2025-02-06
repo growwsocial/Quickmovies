@@ -86,3 +86,35 @@ body {
         .whatsapp-btn-pp:hover {
             transform: scale(1.05);
         }
+movie-poster {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+
+/* Movie Title */
+.movie-title {
+    margin-top: 10px;
+}
+
+/* Movie Details */
+.movie-details {
+    width: 80%;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: left;
+}
+
+/* IMDb Link */
+.imdb-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.imdb-link:hover {
+    text-decoration: underline;
+}
+    </
