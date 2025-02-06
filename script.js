@@ -45,18 +45,26 @@ let selectedMovie = null;
     // Clear the movie list and display user details form
     const movieList = document.getElementById('movieList');
     movieList.innerHTML = `
-        <h3>🎬 Selected Movie Details</h3>
-        <p><b>🏷Title:</b> ${data.Title}</p>
-        <p><b>🎭Genre:</b> ${data.Genre}</p>
-        <p><b>⏳Duration:</b> ${duration}</p>
-        <p><b>🎬Director:</b> ${data.Director}</p>
-        <p><b>👥Cast:</b> ${data.Actors}</p>
-        <p><b>🔗IMDb Link:</b> <a href="${selectedMovie}" target="_blank">View on IMDb</a></p>
-        <br>
-        <h3>📝 Enter Your Details</h3>
-        <input type="text" id="userName" placeholder="Enter your name" style="position: relative; left: 20px;">
-        <input type="text" id="userWhatsapp" placeholder="Enter your WhatsApp number" style="position: relative; left: 20px;">
-        <button onclick="sendToTelegram()" style="position: relative; left: 100px; width: 150px;">Submit</button>
+        <h3>🎬 Selected Movie</h3>
+
+<!-- Movie Poster -->
+<img src="${data.Poster}" alt="${data.Title} Poster" class="movie-poster">
+
+    <div class="movie-title">
+        <h1 style="font-size: 32px; color: #0f0; text-align: center; margin-top: 20px;">${data.Title}</h1>
+    </div>
+
+    <div class="movie-details">
+        <p><b>Genre:</b> ${data.Genre}</p>
+        <p><b>Duration:</b> ${duration}</p>
+        <p><b>Director:</b> ${data.Director}</p>
+        <p><b>Cast:</b> ${data.Actors}</p>
+        <p><b>IMDb Link:</b> <a href="${selectedMovie}" target="_blank" class="imdb-link">View on IMDb</a></p>
+<h3>📝 Enter Your Details</h3>
+    </div>
+           <input type="text" id="userName" placeholder="Enter your name">
+        <input type="text" id="userWhatsapp" placeholder="Enter your WhatsApp number">
+        <button onclick="sendToTelegram()">Submit</button>
     `;
 }
 
@@ -86,7 +94,7 @@ let selectedMovie = null;
 
             fetch(`https://api.telegram.org/bot${telegramBotToken}/sendMessage?chat_id=${chatID}&text=${encodeURIComponent(message)}`)
                 .then(response => response.json())
-                .then(data => alert("✅ We have received your request! We will post it soon in our official group. 🎬\n\n📢 Join and stay tuned! Click the WhatsApp button to join our channel."))
+                .then(data => alert("✅ We have received your request! We will post it soon on our official group. 🎬\n\n📢 Join and stay tuned: https://chat.whatsapp.com/FaIlL5JBl5kJH1FG5SefQq"))
                 .catch(error => alert("Error sending message."));
         }
         
