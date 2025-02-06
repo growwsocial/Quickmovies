@@ -117,4 +117,13 @@ movie-poster {
 .imdb-link:hover {
     text-decoration: underline;
 }
-    </
+.input-field {
+    position: relative;
+    left: 20px;
+}
+
+.submit-button {
+    position: relative;
+    left: 100px;
+    width: 150px;
+}
