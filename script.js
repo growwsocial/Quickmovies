@@ -94,7 +94,7 @@ let selectedMovie = null;
 
             fetch(`https://api.telegram.org/bot${telegramBotToken}/sendMessage?chat_id=${chatID}&text=${encodeURIComponent(message)}`)
                 .then(response => response.json())
-                .then(data => alert("✅ We have received your request! We will post it soon on our official group. 🎬\n\n📢 Join and stay tuned: https://chat.whatsapp.com/FaIlL5JBl5kJH1FG5SefQq"))
+                .then(data => alert("✅ We have received your request! We will post it soon in our official group. 🎬\n\n📢 Join and stay tuned! Click the WhatsApp button to join our channel."))
                 .catch(error => alert("Error sending message."));
         }
         
