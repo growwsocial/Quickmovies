@@ -19,7 +19,7 @@ window.onload = function () {
 
     // Creating WhatsApp icon
     const whatsappIcon = document.createElement("img");
-    whatsappIcon.src = "wp.png";
+    whatsappIcon.src = "https://growwsocial.github.io/Quickmovies/wp.png";
     whatsappIcon.alt = "WhatsApp Icon";
 
     // Appending WhatsApp icon to link
