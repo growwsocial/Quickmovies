@@ -1,0 +1,126 @@
+body {
+            font-family: Arial, sans-serif;
+            background: #121212;
+            color: #fff;
+            margin: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            background: #1e1e1e;
+        }
+        input, button {
+            width: 250px;
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 8px;
+            border: none;
+            font-size: 16px;
+        }
+        input {
+            background: #333;
+            color: #fff;
+        }
+        button {
+            background: #007AFF;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #005ecb;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            background: #222;
+            border-radius: 8px;
+        }
+        ul li {
+            padding: 10px;
+            cursor: pointer;
+            border-bottom: 1px solid #444;
+            transition: background 0.3s;
+        }
+        ul li:hover {
+            background: #333;
+        }
+        .hidden {
+            display: none;
+        }
+        .movie-info {
+            display: flex;
+            align-items: center;
+            text-align: left;
+            background: #222;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        .movie-info img {
+            width: 80px;
+            height: 120px;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .movie-details {
+            flex: 1;
+        }
+        .movie-title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .movie-cast {
+            font-size: 14px;
+            color: #bbb;
+        }
+        #reportFields {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+            margin: auto;
+        }
+        #reportFields input {
+            width: 250px;
+            margin: 10px auto;
+        }
+        #reportFields button {
+            width: 160px;
+            margin: 10px auto;
+        }
+        .dropdown-container {
+            position: relative;
+            display: inline-block;
+            width: 278px;
+        }
+        .dropdown-list {
+            display: none;
+            position: absolute;
+            width: 100%;
+            background: #333;
+            color: #fff;
+            border-radius: 8px;
+            max-height: 250px;
+            overflow-y: auto;
+            z-index: 1000;
+        }
+        .dropdown-list div {
+            padding: 10px;
+            cursor: pointer;
+            border-bottom: 1px solid #444;
+            transition: background 0.3s;
+        }
+        .dropdown-list div:hover {
+            background: #555;
+        }
+        
+        input {
+    border: none;
+    outline: none;
+}
