@@ -7,13 +7,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>    
-    
 <div class="container">
     <h2>📢 <span style="color:#007AFF;">Report Broken Link</span></h2>
-
-    <input type="text" id="movieSearch" placeholder="Search Movie..." oninput="searchMovie()">
+<input type="text" id="movieSearch" placeholder="Search Movie..." oninput="searchMovie()">
     <ul id="movieResults"></ul>
-
     <div id="movieInfo" class="hidden">
         <div class="movie-info">
             <img id="moviePoster" src="" alt="Movie Poster">
@@ -27,56 +24,51 @@
     <div id="reportFields" class="hidden">
         <input type="text" id="oldLink" placeholder="🔗 Broken Link">
         
-   <div class="dropdown-container">
-    <input type="text" id="quality" placeholder="🎥 Quality (e.g. 1080p)" readonly>
-    <div class="dropdown-list" id="dropdownList">
-        <div data-value="480p">480p</div>
-        <div data-value="720p">720p</div>
-        <div data-value="720p HD">720p HD</div>
-        <div data-value="1080p">1080p</div>
-        <div data-value="1080p HD">1080p HD</div>
-        <div data-value="1080p FHD">1080p FHD</div>
-        <div data-value="1440p">1440p</div>
-        <div data-value="2160p (4K)">2160p (4K)</div>
-        <div data-value="4320p (8K)">4320p (8K)</div>
-    </div>
-</div>
+        <div class="dropdown-container">
+            <input type="text" id="quality" placeholder="🎥 Quality (e.g. 1080p)" readonly>
+            <div class="dropdown-list" id="dropdownList">
+                <div data-value="480p">480p</div>
+                <div data-value="720p">720p</div>
+                <div data-value="720p HD">720p HD</div>
+                <div data-value="1080p">1080p</div>
+                <div data-value="1080p HD">1080p HD</div>
+                <div data-value="1080p FHD">1080p FHD</div>
+                <div data-value="1440p">1440p</div>
+                <div data-value="2160p (4K)">2160p (4K)</div>
+                <div data-value="4320p (8K)">4320p (8K)</div>
+            </div>
+        </div>
 
         <div style="display: flex; align-items: center; position: relative; left: 2px; width: 275px;">
-    <input 
-        type="number" 
-        id="size"
-        min="1" 
-        style="width: 100%; border-radius: 8px 0 0 8px; padding: 12px;  outline: none;"
-        placeholder="📦 Enter size">
-    
-    <select style="background: #333; color: #fff; padding: 13.6px; border-radius: 0 8px 8px 0; border-left: 1px solid #555; border: none; outline: none; appearance: none; cursor: pointer;">
-        <option value="MB">MB</option>
-        <option value="GB">GB</option>
-    </select>
-</div>
-        
-              
+            <input 
+                type="number" 
+                id="size"
+                min="1" 
+                style="width: 100%; border-radius: 8px 0 0 8px; padding: 12px; outline: none;"
+                placeholder="📦 Enter size">
+            
+            <select style="background: #333; color: #fff; padding: 13.6px; border-radius: 0 8px 8px 0; border-left: 1px solid #555; border: none; outline: none; appearance: none; cursor: pointer;">
+                <option value="MB">MB</option>
+                <option value="GB">GB</option>
+            </select>
+        </div>
         <input type="text" id="name" placeholder="👤 Your Name">
+        
         <div style="display: flex; align-items: center; position: relative; left: 2px; width: 275px;">
-    <span style="background: #333; color: #fff; padding: 12px; border-radius: 8px 0 0 8px; border-right: 1px solid #555; ">+91</span>
-    <input 
-        type="text" 
-        id="mobile" 
-        maxlength="10" 
-        style="width: calc(100% - 40px); border-radius: 0 8px 8px 0; padding: 12px; outline: " 
-        placeholder="XXXXXXXXXX" 
-        oninput="validateIndianNumber(this)">
-</div>
+            <span style="background: #333; color: #fff; padding: 12px; border-radius: 8px 0 0 8px; border-right: 1px solid #555;">+91</span>
+            <input 
+                type="text" 
+                id="mobile" 
+                maxlength="10" 
+                style="width: calc(100% - 40px); border-radius: 0 8px 8px 0; padding: 12px;" 
+                placeholder="XXXXXXXXXX" 
+                oninput="validateIndianNumber(this)">
+        </div>
+
         <button onclick="validateAndSendReport()">🚀 Submit Report</button>
     </div>
 </div>
-
-<script src="script.js">  
-</script>
-
-<script src="jquery.js">    
-</script>
-
+<script src="script.js"></script>
+<script src="jquery.js"></script>
 </body>
 </html>
