@@ -64,3 +64,17 @@ body {
         .copy-btn:hover {
             background-color: #28a745;
         }
+        footer {
+        background-color: #121212;
+        color: #ffffff;
+        text-align: center;
+        padding: 15px;
+        font-size: 14px;
+        font-family: Arial, sans-serif;
+        border-top: 2px solid #00ff99;
+    }
+
+    footer span {
+        color: #00ff99;
+        font-weight: bold;
+    }
