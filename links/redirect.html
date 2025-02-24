@@ -11,7 +11,7 @@
 
             try {
                 console.log("Fetching links.json...");
-                const response = await fetch(linksFile);
+                const response = await fetch(linksFile + `?t=${Date.now()}`);
                 if (!response.ok) throw new Error("Failed to fetch links.json");
 
                 const data = await response.json();
