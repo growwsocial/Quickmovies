@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        async function redirect() {
+            const code = window.location.pathname.split("/").pop();  
+            const linksFile = "https://growwsocial.github.io/Quickmovies/links/links.json";  
+
+            try {
+                console.log("Fetching links.json...");
+                const response = await fetch(linksFile);
+                if (!response.ok) throw new Error("Failed to fetch links.json");
+
+                const data = await response.json();
+                if (data[code]) {
+                    console.log("✅ Redirecting to:", data[code]);
+                    window.location.href = data[code];  
+                } else {
+                    console.error("❌ Invalid link code:", code);
+                    document.body.innerHTML = "<h2>⚠️ Link not found.</h2>";
+                }
+            } catch (error) {
+                console.error("❌ Error fetching links.json:", error);
+                document.body.innerHTML = "<h2>⚠️ Error loading the short link.</h2>";
+            }
+        }
+
+        redirect();
+    </script>
+</head>
+<body>
+    <h2>🔄 Redirecting...</h2>
+</body>
+</html>
