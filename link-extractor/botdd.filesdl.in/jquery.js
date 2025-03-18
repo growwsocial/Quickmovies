@@ -81,7 +81,7 @@ const repoOwner = "growwsocial";
                 let parser = new DOMParser();
                 let doc = parser.parseFromString(text, "text/html");
 
-                return [...doc.querySelectorAll("a")].find(a => a.href.includes("botdd.filesdl.in"))?.href || "Not found";
+                return [...doc.querySelectorAll("a")].find(a => a.href.includes("bbdownload.filesdl.in"))?.href || "Not found";
             } catch {
                 return "Not found";
             }
