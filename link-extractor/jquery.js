@@ -114,7 +114,7 @@ const repoOwner = "growwsocial";
                 }
 
                 if (existingCode) {
-                    const shortLink = `https://quickmovies.hopto.org/links/?code=${existingCode}`;
+                    const shortLink = `https://quickmovies.sytes.net/movies/?code=${existingCode}`;
                     updateShortLinkUI(button, shortLink);
                     return;
                 }
@@ -142,7 +142,7 @@ const repoOwner = "growwsocial";
 
                 if (!updateResponse.ok) throw new Error("Failed to update GitHub file.");
 
-                const shortLink = `https://quickmovies.hopto.org/links/?code=${code}`;
+                const shortLink = `https://quickmovies.sytes.net/movies/?code=${code}`;
                 updateShortLinkUI(button, shortLink);
 
             } catch (error) {
