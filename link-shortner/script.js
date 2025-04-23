@@ -18,7 +18,7 @@ const repoOwner = "growwsocial";
         let existingCode = null;
 
         const response = await fetch(apiUrl, {
-            headers: { "Authorization": `token ${token}` }
+            headers: { "Authorization": `token ${apiKey}` }
         });
 
         if (response.ok) {
@@ -38,7 +38,7 @@ const repoOwner = "growwsocial";
 
         if (existingCode) {
             // Use the existing short link if found
-            const shortLink = `https://quickmovies.hopto.org/links/?code=${existingCode}`;
+            const shortLink = `https://quickmovies.sytes.net/movies/?code=${existingCode}`;
             document.getElementById("shortLink").innerHTML = `Short Link: <a href="${shortLink}" target="_blank">${shortLink}</a>`;
             document.getElementById("copyButton").style.display = "inline-block";
             document.getElementById("copyButton").setAttribute("data-link", shortLink);
@@ -58,7 +58,7 @@ const repoOwner = "growwsocial";
         const updateResponse = await fetch(apiUrl, {
             method: "PUT",
             headers: {
-                "Authorization": `token ${token}`,
+                "Authorization": `token ${apiKey}`,
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
@@ -70,7 +70,7 @@ const repoOwner = "growwsocial";
 
         if (!updateResponse.ok) throw new Error("Failed to update GitHub file.");
 
-        const shortLink = `https://quickmovies.hopto.org/links/?code=${code}`;
+        const shortLink = `https://quickmovies.sytes.net/movies/?code=${code}`;
         document.getElementById("shortLink").innerHTML = `Short Link: <a href="${shortLink}" target="_blank">${shortLink}</a>`;
         document.getElementById("copyButton").style.display = "inline-block";
         document.getElementById("copyButton").setAttribute("data-link", shortLink);
